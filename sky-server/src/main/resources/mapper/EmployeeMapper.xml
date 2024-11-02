@@ -13,10 +13,12 @@
         </where>
         order by update_time desc
     </select>
+
+
     <update id="update">
         update employee
         <set>
-             <if test="status != null">status = #{status},</if>
+            <if test="status != null">status = #{status},</if>
             <if test="username != null"> username = #{username},</if>
             <if test="name != null"> name = #{name},</if>
             <if test="password != null"> password = #{password},</if>
